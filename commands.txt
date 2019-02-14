@@ -1,0 +1,18 @@
+V1 - manual single EC2
+
+1. launch t2.xlarge with security group
+2. rm -rf ~/projects/FractalJS/node_modules && rm -rf ~/projects/FractalJS/dist && scp -i "~/.aws/my-key-pair.pem" -r ~/projects/FractalJS 
+3. ssh
+4. 
+   sudo apt-get update
+   curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+   sudo apt-get install -y nodejs 
+
+5. npm i
+6. npm run http-build
+7. ENABLE_CLUSTER=true node dist/js/node/http/server.js
+
+
+
+V2 - packer + terraform single EC2
+
