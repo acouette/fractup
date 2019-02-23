@@ -97,7 +97,7 @@ resource "aws_security_group" "fractal_worker_sg" {
 resource "aws_launch_template" "fractal_worker" {
   name_prefix   = "fractal"
   image_id      = "${data.aws_ami.fractal.id}"
-  instance_type = "t2.small"
+  instance_type = "t2.micro"
   monitoring {
     enabled = true
   }

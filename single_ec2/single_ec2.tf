@@ -61,7 +61,7 @@ resource "aws_security_group" "fractal_worker_sg" {
 
 resource "aws_instance" "fractal-worker" {
   ami           = "${data.aws_ami.fractal.id}"
-  instance_type = "t2.medium"
+  instance_type = "t2.micro"
 
   monitoring = "true" 
 
